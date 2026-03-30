@@ -2,17 +2,19 @@ section header {
   border-top: 1px solid var(--strake-color);
   padding-block: 12px 24px;
   font: var(--text-span);
-  header a {
+
+   a {
   justify-self:end;
   align-items: center;
   gap: 8px;
+
   span {
     background-image: url(../assets/icons/ArrowRight.svg);
     width: 16px;
     height: 16px;
   }
 
-  &hover span {
+  &:hover span {
     background-image: url(../assets/icons/ArrowRight.svg);
   }
 }
@@ -62,24 +64,30 @@ border-radius: 4px;
 }
 
 #weekly {
+
+
 &>div{
   grid-template-columns: repeat(4, 292px);
 }
 
+
+
 img {
   height: 160px;
 }
+
 figure {
-  position: relative; 
+  position: relative;
 
   .content-tag {
     position: absolute;
     top: 8px;
     left: 8px;
   }
+
   p {
     margin-top: 8px;
-    font-style: 800;
+    font-weight: 800;
   }
 }
 
