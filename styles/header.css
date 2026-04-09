@@ -1,24 +1,107 @@
 #primery {
   padding-block: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+}
 
-div {
+#primery div {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-  div:nth-child(2) {
-   margin-inline: auto;
-}
- div:nth-child(3) {
- justify-self: end;
+#primery div:nth-child(2) {
+  margin-inline: auto;
+  flex: 0 0 auto;
 }
 
+#primery div:nth-child(3) {
+  margin-inline-start: auto;
 }
 
-#secundary {
+#secondary {
+  display: flex !important;
   padding-block: 14px;
   border: solid 1px var(--stroke-color);
   border-inline: none;
+  gap: 16px;
   justify-content: space-between;
+  grid-auto-flow: unset !important;
+}
+
+#secondary a {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #primery {
+    padding-block: 14px;
+    gap: 6px;
+  }
+
+  #primery strong {
+    font-size: 12px;
+  }
+
+  #primery img {
+    width: 20px;
+  }
+
+  #secondary {
+    padding-block: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #secondary a {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #primery {
+    padding-block: 12px;
+    gap: 4px;
+  }
+
+  #primery div {
+    gap: 4px;
+  }
+
+  #primery strong {
+    display: none;
+  }
+
+  #primery div:nth-child(1) img,
+  #primery div:nth-child(3) img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #primery div:nth-child(2) img {
+    width: 80px;
+    height: auto;
+  }
+
+  #secondary {
+    padding-block: 8px;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  #secondary a {
+    font-size: 11px;
+    padding: 4px 6px;
+    background-color: rgba(30, 41, 59, 0.6);
+    border-radius: 3px;
+  }
 }

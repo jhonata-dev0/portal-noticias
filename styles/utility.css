@@ -31,3 +31,18 @@ gap: 32px;
 .text-sm {
   font: var(--h4);
 }
+
+@media (max-width: 480px) {
+  .grid-flow-col {
+    grid-auto-flow: initial !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .gap-16 {
+    gap: 8px;
+  }
+
+  .gap-32 {
+    gap: 12px;
+  }
+}
